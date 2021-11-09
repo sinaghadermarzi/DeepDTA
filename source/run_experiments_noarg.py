@@ -40,7 +40,7 @@ from keras.layers.normalization import BatchNormalization
 from keras.layers import Conv2D, GRU
 from keras.layers import Input, Embedding, LSTM, Dense, TimeDistributed, Masking, RepeatVector, merge, Flatten
 from keras.models import Model
-from keras.utils import plot_model
+# from keras.utils import plot_model
 from keras.layers import Bidirectional
 from keras.callbacks import ModelCheckpoint, EarlyStopping
 from keras import optimizers, layers
@@ -97,7 +97,7 @@ def build_combined_onehot(FLAGS, NUM_FILTERS, FILTER_LENGTH1, FILTER_LENGTH2):
     
 
     print(interactionModel.summary())
-    plot_model(interactionModel, to_file='figures/build_combined_onehot.png')
+    # plot_model(interactionModel, to_file='figures/build_combined_onehot.png')
 
     return interactionModel
 
@@ -142,7 +142,7 @@ def build_combined_categorical(FLAGS, NUM_FILTERS, FILTER_LENGTH1, FILTER_LENGTH
 
     interactionModel.compile(optimizer='adam', loss='mean_squared_error', metrics=[cindex_score]) #, metrics=['cindex_score']
     print(interactionModel.summary())
-    plot_model(interactionModel, to_file='figures/build_combined_categorical.png')
+    # plot_model(interactionModel, to_file='figures/build_combined_categorical.png')
 
     return interactionModel
 
@@ -178,7 +178,7 @@ def build_single_drug(FLAGS, NUM_FILTERS, FILTER_LENGTH1, FILTER_LENGTH2):
     interactionModel.compile(optimizer='adam', loss='mean_squared_error', metrics=[cindex_score])
 
     print(interactionModel.summary())
-    plot_model(interactionModel, to_file='figures/build_single_drug.png')
+    # plot_model(interactionModel, to_file='figures/build_single_drug.png')
 
     return interactionModel
 
@@ -211,7 +211,7 @@ def build_single_prot(FLAGS, NUM_FILTERS, FILTER_LENGTH1, FILTER_LENGTH2):
     interactionModel.compile(optimizer='adam', loss='mean_squared_error', metrics=[cindex_score])
 
     print(interactionModel.summary())
-    plot_model(interactionModel, to_file='figures/build_single_protein.png')
+    # plot_model(interactionModel, to_file='figures/build_single_protein.png')
 
     return interactionModel
 
@@ -238,7 +238,7 @@ def build_baseline(FLAGS, NUM_FILTERS, FILTER_LENGTH1, FILTER_LENGTH2):
     interactionModel.compile(optimizer='adam', loss='mean_squared_error', metrics=[cindex_score])
 
     print(interactionModel.summary())
-    plot_model(interactionModel, to_file='figures/build_baseline.png')
+    # plot_model(interactionModel, to_file='figures/build_baseline.png')
 
     return interactionModel
 
