@@ -58,7 +58,7 @@ class dta_dataset:
 		cids = self.df.loc[index_list,"compound_pubchem_cid"].values
 		pids = self.df.loc[index_list, "protein_uniprot_id"].values
 		seqs  = self.df.loc[index_list, "protein_sequence"].values
-		SMILEs = self.df.loc[index_list, "comppound_SMILES"].values
+		SMILEs = self.df.loc[index_list, "compound_SMILES"].values
 		affs = self.df.loc[index_list, "affinity[-log10(Ki/10e9)]"].astype(float).values
 		num_obj = len(index_list)
 		X_compound = [None] * num_obj
